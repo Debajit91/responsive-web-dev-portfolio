@@ -55,6 +55,11 @@
     background-repeat: no-repeat;
     background-position: top left, bottom right;
 }
+@media screen and (max-width:576px) {
+    .header{
+        background-image: none;
+    }
+}
 
 /* nav style */
 nav {
@@ -83,7 +88,16 @@ nav ul {
     display: flex;
     align-items: center;
 }
-
+@media screen and (max-width:576px) {
+    nav{
+        flex-direction: column;
+        margin: 20px;
+    }
+    nav>ul{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
 /* banner-styles */
 .banner {
     display: flex;
@@ -100,7 +114,6 @@ nav ul {
 .banner-greetings {
     font-size: 45px;
     font-weight: 600px;
-
 }
 
 .banner-title {
@@ -115,6 +128,21 @@ nav ul {
 .banner-profile-pic {
     width: 585px;
 }
+@media screen and (max-width:576px) {
+    .banner{
+        flex-direction: column;
+        margin: 20px;
+    }
+    .banner-title {
+        font-size: 50px;
+    }
+    .banner-profile-pic {
+        width: 100%;
+    }
+    .banner-content{
+        width: 100%;
+    }
+}
 
 /* main styles */
 main {
@@ -125,6 +153,7 @@ main {
 main section {
     margin: 130px 0;
 }
+
 
 /* about styles */
 .about {
@@ -181,6 +210,9 @@ main section {
 }
 /* Skill Section Responsive Media Query */
 @media screen and (max-width:576px) {
+    .skills{
+        margin:20px;
+    }
     .skills-container{
         flex-direction: column;
     }
@@ -212,6 +244,10 @@ main section {
 }
 /* Resume Section Responsive Media Query */
 @media screen and (max-width:576px) {
+    .resume{
+        text-align: center;
+        margin: 40px;
+    }
     .resume-container{
         flex-direction: column;
     }
